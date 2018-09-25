@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1534479597 source:/home/smsm/Documents/Linux-Cpp/Task_2/main.c
+	<stdio.h>
+	<limits.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+

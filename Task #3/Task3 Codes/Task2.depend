@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1535820145 source:x:\c++\task2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	<ctype.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+
