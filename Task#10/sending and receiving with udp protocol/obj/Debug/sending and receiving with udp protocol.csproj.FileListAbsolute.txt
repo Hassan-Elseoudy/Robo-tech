@@ -1,0 +1,36 @@
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe.config
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.pdb
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending_and_receiving_with_udp_protocol.Form1.resources
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending_and_receiving_with_udp_protocol.Properties.Resources.resources
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.csproj.GenerateResource.Cache
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.exe
+C:\Users\DELL\Desktop\sesso\New folder\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.pdb
+C:\Users\DELL\Desktop\sesso\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe.config
+C:\Users\DELL\Desktop\sesso\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.exe
+C:\Users\DELL\Desktop\sesso\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.pdb
+D:\study\ROV\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe.config
+D:\study\ROV\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.exe
+D:\study\ROV\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.pdb
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe.config
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.exe
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.pdb
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.pdb
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.csprojResolveAssemblyReference.cache
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending_and_receiving_with_udp_protocol.Form1.resources
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending_and_receiving_with_udp_protocol.Properties.Resources.resources
+D:\study\4-third year elect\work\ROV2\C#\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.csproj.GenerateResource.Cache
+D:\study\4-third year elect\work\ROV2017\C#\sessions\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe.config
+D:\study\4-third year elect\work\ROV2017\C#\sessions\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.exe
+D:\study\4-third year elect\work\ROV2017\C#\sessions\session 4\codes for session 4\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.pdb
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe.config
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.exe
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.pdb
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.csprojResolveAssemblyReference.cache
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending_and_receiving_with_udp_protocol.Form1.resources
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending_and_receiving_with_udp_protocol.Properties.Resources.resources
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\obj\Debug\sending and receiving with udp protocol.csproj.GenerateResource.Cache
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.exe
+D:\study\4-third year elect\work\ROV2017\C#\All codes\sending and receiving with udp protocol\sending and receiving with udp protocol\bin\Debug\sending and receiving with udp protocol.pdb
