@@ -104,9 +104,12 @@ namespace JoyStickInterface
     public class JoystickStateEventArgs :EventArgs
     {
         public JoystickState state{private set; get;}
-        public int [] axisACDF = new int [4];   //ACDF
-        public int axisB;
-        public int axisE;
+        public int axisA { private set; get; }
+        public int axisB { private set; get; }
+        public int axisC { private set; get; }
+        public int axisD { private set; get; }
+        public int axisE { private set; get; }
+        public int axisF { private set; get; }
         public int[] pov { private set; get; }
         public bool[] buttons { private set; get; }
         public JoystickStateEventArgs(JoystickState state)
@@ -114,12 +117,12 @@ namespace JoyStickInterface
             this.state = state;
             int[] extraAxis = state.GetSlider();
 
-            axisACDF[0] = state.Rz;
+            axisA = state.Rz;
             axisB = state.Rx;
-            axisACDF[1] = state.X;
-            axisACDF[2] = state.Y;
+            axisC = state.X;
+            axisD = state.Y;
             axisE = state.Z;
-            axisACDF[3] = extraAxis[0];
+            axisF = extraAxis[0];
             // Console.WriteLine(Convert.ToString(axisA));
 
             byte[] jsButtons = state.GetButtons();
