@@ -116,7 +116,7 @@ namespace JoyStickInterface
         {
             this.state = state;
             int[] extraAxis = state.GetSlider();
-
+                
             axisA = state.Rz;
             axisB = state.Rx;
             axisC = state.X;
@@ -128,7 +128,6 @@ namespace JoyStickInterface
             byte[] jsButtons = state.GetButtons();
             int i = 0;
             buttons = new bool[jsButtons.Length];
-
             foreach (byte button in jsButtons)
             {
                 buttons[i++] = (button == 128);

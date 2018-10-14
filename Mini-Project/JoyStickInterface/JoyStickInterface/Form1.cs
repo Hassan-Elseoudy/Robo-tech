@@ -31,7 +31,7 @@ namespace JoyStickInterface
         JoyStick joyStick;
         int flag = 0; //Prevent pilot making error before starting communication....
         Socket SCK;
-        EndPoint Local_ip, Remote_ip; 
+        EndPoint Local_ip, Remote_ip;
 
         public Form1()
         {
@@ -51,19 +51,16 @@ namespace JoyStickInterface
             // DC Motor
             string DC = " ";
 
-            //Functions for Mapping ....functions take integer from joystick like (e.axisE,e.axisD.....or axisA)
+            /* Parameters 
+             joyAxis -> Axis A / Axis C / Axis D / Axis E
+             joyReads -> values between END_UP_ZONE to END_DOWN_ZONE
+             mapPoint -> values between MIN_POINT to MAX_POINT
+             */
 
-            int toMAX_Point(int input) =>
-                (MID_POINT + ((Math.Abs(input - START_UP_ZONE) / START_UP_ZONE) * (MAX_POINT - MID_POINT)));
-
-            int UndoMAX_Point(int input) =>
-                 (MID_POINT - ((Math.Abs(input - START_UP_ZONE) / START_UP_ZONE) * (MID_POINT - MIN_POINT)));
-
-            int toMIN_Point(int input) =>
-                (MID_POINT - (((input - START_DOWN_ZONE) / (END_DOWN_ZONE - START_DOWN_ZONE)) * (MID_POINT - MIN_POINT)));
-
-            int UndoMIN_Point(int input) =>
-                (MID_POINT + (((input - START_DOWN_ZONE) / (END_DOWN_ZONE - START_DOWN_ZONE)) * (MAX_POINT - MID_POINT)));
+            int map(int joyAxis, int joyRead1, int joyRead2, int mapPoint1, int mapPoint2)
+            {
+                return (mapPoint1 + ((joyAxis - joyRead1) * (mapPoint2 - mapPoint1) / (joyRead2 - joyRead1)));
+            }
 
             void changeValues()
             {
@@ -73,6 +70,9 @@ namespace JoyStickInterface
                 textBox12.Text = Convert.ToString(esMotor[3]);
                 textBox13.Text = Convert.ToString(esMotor[4]);
                 textBox14.Text = Convert.ToString(esMotor[5]);
+                textBox16.Text = Convert.ToString(dir1);
+                textBox18.Text = Convert.ToString(dir2);
+                textBox19.Text = Convert.ToString(pwm);
 
                 textBox5.Text =
                       "A" + Convert.ToString(esMotor[0])
@@ -86,7 +86,26 @@ namespace JoyStickInterface
                     + "I" + Convert.ToString(bluetoothStatus)
                     + "J" + Convert.ToString(dir1)
                     + "K" + Convert.ToString(dir2)
-                    + "L" + Convert.ToString(pwm) + "M\r\n";
+                    + "L" + Convert.ToString(pwm) + "M";
+
+                btnValue1.Checked = e.buttons[0];
+                btnValue2.Checked = e.buttons[1];
+                btnValue3.Checked = e.buttons[2];
+                btnValue4.Checked = e.buttons[3];
+                btnValue5.Checked = e.buttons[4];
+                btnValue6.Checked = e.buttons[6];
+                btnValue7.Checked = e.buttons[7];
+                btnValue8.Checked = e.buttons[8];
+                btnValue9.Checked = e.buttons[9];
+                btnValue10.Checked = e.buttons[10];
+                btnValue11.Checked = e.buttons[11];
+                btnValue12.Checked = e.buttons[12];
+                btnValue13.Checked = e.buttons[13];
+                btnValue14.Checked = e.buttons[14];
+                btnValue15.Checked = e.buttons[15];
+                btnValue16.Checked = e.buttons[16];
+                btnValue17.Checked = e.buttons[17];
+                povXtxt.Text = Convert.ToString(e.pov[0]);
             }
 
             if (InvokeRequired)
@@ -96,110 +115,82 @@ namespace JoyStickInterface
             }
             Console.WriteLine(z.ToString());
             z++;
-            axisAtxt.Text = Convert.ToString(e.axisA);
-            axisCtxt.Text = Convert.ToString(e.axisC);
-            axisDtxt.Text = Convert.ToString(e.axisD);
-            axisEtxt.Text = Convert.ToString(e.axisE);
-            axisFtxt.Text = Convert.ToString(e.axisF);
 
-            btn1.Checked = e.buttons[0];
-            btn2.Checked = e.buttons[1];
-            btn3.Checked = e.buttons[2];
-            btn4.Checked = e.buttons[3];
-            btn5.Checked = e.buttons[4];
-            btn6.Checked = e.buttons[5];
-            btn7.Checked = e.buttons[6];
-            btn8.Checked = e.buttons[7];
-            btn9.Checked = e.buttons[8];
-            btn10.Checked = e.buttons[9];
-            btn11.Checked = e.buttons[10];
-            btn12.Checked = e.buttons[11];
-            btn13.Checked = e.buttons[12];
-            btn14.Checked = e.buttons[13];
-            btn15.Checked = e.buttons[14];
-            btn16.Checked = e.buttons[15];
-            btn17.Checked = e.buttons[16];
-            btn18.Checked = e.buttons[17];
-            povXtxt.Text = Convert.ToString(e.pov[0]);
 
             //Forward : Mapping from START_UP_ZONE to END_UP_ZONE >>>> MID_POINT to MAX_POINT.
             if (e.axisD < START_UP_ZONE && e.axisD < e.axisC && e.axisD < END_DOWN_ZONE - e.axisC)
             {
-                for (int i = 0; i < esMotor.Length - 2; i++) /* First 4 Motors */
-                    esMotor[i] = toMAX_Point(e.axisD);
+                esMotor[0] = esMotor[1] = esMotor[2] = esMotor[3] =
+                map(e.axisD, START_UP_ZONE, END_UP_ZONE, MID_POINT, MAX_POINT);
                 changeValues();
             }
 
             //Backward : Mapping from START_DOWN_ZONE to END_DOWN_ZONE >>>> MID_POINT to MIN_POINT.
-            else if (e.axisD > 40000 && e.axisD > e.axisC && e.axisD > END_DOWN_ZONE - e.axisC)
+            else if (e.axisD > START_DOWN_ZONE && e.axisD > e.axisC && e.axisD > END_DOWN_ZONE - e.axisC)
             {
-                for (int i = 0; i < esMotor.Length - 2; i++) /* First 4 Motors */
-                    esMotor[i] = toMIN_Point(e.axisD);
+                esMotor[0] = esMotor[1] = esMotor[2] = esMotor[3] =
+                    map(e.axisD, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MIN_POINT);
             }
 
             //Left Direction
             else if (e.axisC < START_UP_ZONE && e.axisC < e.axisD && e.axisC < END_DOWN_ZONE - e.axisD)
             {
-                esMotor[0] = toMAX_Point(e.axisC);
-                esMotor[1] = UndoMAX_Point(e.axisC);
-                esMotor[2] = toMAX_Point(e.axisC);
-                esMotor[3] = UndoMAX_Point(e.axisC);
+                esMotor[0] = esMotor[2] =
+                    map(e.axisC, START_UP_ZONE, END_UP_ZONE, MID_POINT, MAX_POINT);
+                esMotor[1] = esMotor[3] =
+                    map(e.axisC, START_UP_ZONE, END_UP_ZONE, MID_POINT, MIN_POINT);
             }
 
             //Right Direction
             else if (e.axisC > 40000 && e.axisC > e.axisD && e.axisC > END_DOWN_ZONE - e.axisD)
             {
-                esMotor[0] = toMIN_Point(e.axisC);
-                esMotor[1] = UndoMIN_Point(e.axisC);
-                esMotor[2] = toMIN_Point(e.axisC);
-                esMotor[3] = UndoMIN_Point(e.axisC);
+                esMotor[0] = esMotor[2] =
+                    map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MIN_POINT);
+                esMotor[1] = esMotor[3] =
+                    map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MAX_POINT);
             }
 
             //Up Direction
-            if (e.axisE < START_UP_ZONE && e.axisE < e.axisA && e.axisE < END_DOWN_ZONE - e.axisA)
+            if (e.axisF < START_UP_ZONE)
             {
-                esMotor[4] = toMAX_Point(e.axisA);
-                esMotor[5] = toMAX_Point(e.axisA);
+                esMotor[4] = esMotor[5] =
+                    map(e.axisF, START_UP_ZONE, END_UP_ZONE, MID_POINT, MAX_POINT);
             }
 
             //Down Direction
-            else if (e.axisE > START_DOWN_ZONE && e.axisE > e.axisA && e.axisE > END_DOWN_ZONE - e.axisA)
+            else if (e.axisF > START_DOWN_ZONE)
             {
-                esMotor[4] = toMIN_Point(e.axisA);
-                esMotor[5] = toMIN_Point(e.axisA);
+                esMotor[4] = esMotor[5] =
+                    map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MIN_POINT);
             }
 
             //Rotate Left
-            if (e.axisA < START_UP_ZONE && e.axisE > e.axisA && e.axisE < END_DOWN_ZONE - e.axisA)
+            if (e.axisA < START_UP_ZONE)
             {
-                esMotor[0] = UndoMAX_Point(e.axisE);
-                esMotor[1] = toMAX_Point(e.axisE);
-                esMotor[2] = toMAX_Point(e.axisE);
-                esMotor[3] = UndoMAX_Point(e.axisE);
+                esMotor[1] = esMotor[2] =
+                    map(e.axisE, START_UP_ZONE, END_UP_ZONE, MID_POINT, MAX_POINT);
+                esMotor[0] = esMotor[3] =
+                    map(e.axisE, START_UP_ZONE, END_UP_ZONE, MID_POINT, MIN_POINT);
             }
 
             //Rotate Right
-            if (e.axisA > START_DOWN_ZONE && e.axisE < e.axisA && e.axisE > END_DOWN_ZONE - e.axisA)
+            else if (e.axisA > START_DOWN_ZONE)
             {
-                esMotor[0] = UndoMIN_Point(e.axisE);
-                esMotor[1] = toMIN_Point(e.axisE);
-                esMotor[2] = toMIN_Point(e.axisE);
-                esMotor[3] = UndoMIN_Point(e.axisE);
+                esMotor[1] = esMotor[2] =
+                    map(e.axisE, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MIN_POINT);
+                esMotor[0] = esMotor[3] =
+                    map(e.axisE, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MAX_POINT);
             }
 
-            //Solenoid is closed.
-            if (e.buttons[5])
-                textBox15.Text = Convert.ToString(solenStatus = 0);
-
-            //Solenoid is open.
-            if (e.buttons[6])
-                textBox15.Text = Convert.ToString(solenStatus = 1);
+            //Solenoid
+            textBox15.Text = (e.buttons[5]) ? 
+                Convert.ToString(solenStatus = 1) :
+                Convert.ToString(solenStatus = 0);
 
             //Bluetooth
             textBox17.Text = (e.buttons[8] == true ?
                 Convert.ToString(bluetoothStatus = 1) :
                 Convert.ToString(bluetoothStatus = 0));
-
 
             while (e.buttons[10])
             {
@@ -208,9 +199,6 @@ namespace JoyStickInterface
                 {
                     dir1 = 1; dir2 = 0; DC = "Right";
                     pwm = (Math.Abs(e.axisC - START_DOWN_ZONE) / (END_DOWN_ZONE - START_DOWN_ZONE)) * 255;
-                    textBox16.Text = Convert.ToString(dir1);
-                    textBox18.Text = Convert.ToString(dir2);
-                    textBox19.Text = Convert.ToString(pwm);
                 }
 
                 //Left DC
@@ -218,31 +206,40 @@ namespace JoyStickInterface
                 {
                     dir1 = 0; dir2 = 1; DC = "Left";
                     pwm = (Math.Abs(e.axisC - START_UP_ZONE) / START_UP_ZONE) * 255;
-                    textBox16.Text = Convert.ToString(dir1);
-                    textBox18.Text = Convert.ToString(dir2);
-                    textBox19.Text = Convert.ToString(pwm);
                 }
 
             }
 
             changeValues();
 
-            ASCIIEncoding enc = new ASCIIEncoding();
-            byte[] msg = new byte[1500];
-            msg = enc.GetBytes(textBox5.Text);
+            if (flag == 1)
+            {
+                ASCIIEncoding enc = new ASCIIEncoding();
+                byte[] msg = new byte[1500];
+                msg = enc.GetBytes(textBox5.Text);
 
-            SCK.Send(msg);
-            textBox6.AppendText("ME : " + textBox5.Text + "\r\n");
-            textBox5.Clear();
+                SCK.Send(msg);
+                textBox6.AppendText("ME : " + textBox5.Text + "\r\n");
+                textBox5.Clear();
+            }
         }
 
+        //Default data.
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "192.168.0.201";
+            textBox2.Text = "192.168.0.7";
+            textBox3.Text = "8234";
+            textBox4.Text = "8002";
+        }
+
+        //Default data.
         private void button2_Click(object sender, EventArgs e)
         {
             //Prevent user from using it again 
             flag = 1; // Pilot can use joystick without any error ...
-            button1.Enabled = false; 
+            button1.Enabled = false;
             button2.Enabled = false;
-            button3.Enabled = false;
             button2.Text = "Connected";
 
             Local_ip = new IPEndPoint(IPAddress.Parse(textBox1.Text), Convert.ToInt32(textBox3.Text));//son (IPEndpoint)...take ip and port && IPAddress.parse convert any input to ip address of laptop
@@ -257,23 +254,8 @@ namespace JoyStickInterface
 
         }
 
-        //Default data. 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-
-            textBox1.Text = "192.168.0.201";
-            textBox2.Text = "192.168.0.7";
-            textBox3.Text = "8234";
-            textBox4.Text = "8002";
-        }
-
-        //Default data. 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "192.168.0.1";
-            textBox2.Text = "192.168.0.1";
-            textBox3.Text = "2";
-            textBox4.Text = "1";
 
         }
 

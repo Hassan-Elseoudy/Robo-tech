@@ -100,3 +100,15 @@ C:\Users\Moustafa\Desktop\robo\New folder\New folder\joyWithUdp\JoyStickInterfac
 C:\Users\Moustafa\Desktop\robo\New folder\New folder\joyWithUdp\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.CopyComplete
 C:\Users\Moustafa\Desktop\robo\New folder\New folder\joyWithUdp\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
 C:\Users\Moustafa\Desktop\robo\New folder\New folder\joyWithUdp\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+X:\Robo-Tech\Mini-Project\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+X:\Robo-Tech\Mini-Project\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+X:\Robo-Tech\Mini-Project\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+X:\Robo-Tech\Mini-Project\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+X:\Robo-Tech\Mini-Project\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.CoreCompileInputs.cache
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+X:\Robo-Tech\Mini-Project\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
