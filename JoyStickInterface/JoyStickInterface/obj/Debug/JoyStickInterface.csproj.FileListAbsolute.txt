@@ -1,9 +1,0 @@
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\bin\Debug\JoyStickInterface.exe.config
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\obj\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\obj\Debug\JoyStickInterface.Form1.resources
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\obj\Debug\JoyStickInterface.Properties.Resources.resources
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\obj\Debug\JoyStickInterface.csproj.GenerateResource.Cache
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\bin\Debug\JoyStickInterface.exe
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\bin\Debug\JoyStickInterface.pdb
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\obj\Debug\JoyStickInterface.exe
-c:\users\mamdouh\documents\visual studio 2013\Projects\Haytham\JoyStickInterface\JoyStickInterface\obj\Debug\JoyStickInterface.pdb
