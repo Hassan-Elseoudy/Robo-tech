@@ -152,3 +152,158 @@ X:\Robotech Official_V1\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Iro
 X:\Robotech Official_V1\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
 X:\Robotech Official_V1\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
 X:\Robotech Official_V1\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+D:\robo-tech team\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+C:\Users\Karim\Desktop\robo\Robotech Official_V5\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+C:\Users\OWNER.LENOVO\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+G:\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+C:\Users\alaa salah younes\Desktop\Robotech Official_V5\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.CoreCompileInputs.cache
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb

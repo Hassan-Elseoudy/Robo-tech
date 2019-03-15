@@ -41,26 +41,38 @@ namespace JoyStickInterface
         private double D3 = 1.0;
         private double Length = 1.0;
         private double specific_gravity = 1.0;
+        private double lift_capability = 0;
+        private double Given_Force = 0;
 
         //Results (Experimental)
         private double expr_Volume = 0;
         private double expr_Force = 0;
-        private double expr_Weight = 0;
+        private double expr_mass = 0;
 
         //Results (Real)
         private double real_Volume = 0;
         private double real_Force = 0;
-        private double real_Weight = 0;
+        private double real_mass = 0;
+        private double difference = 0;
 
-        int[] esMotor = new int[6] { 1500, 1500, 1500, 1500, 1500, 1500 };
+        private int[] esMotor = new int[6] { 1500, 1500, 1500, 1500, 1500, 1500 };
 
         // Status
-        public int micro = 0;
-        int solenStatus = 0, dir1 = 0, dir2 = 0, pwm1 = 0, pwm2 = 0, pneu_flag = 0,light_flag = 0, light = 0;
-        // DC Motor
-        string Data;
+        private int micro = 0;
+        private int solenStatus = 0, dir1 = 0, dir2 = 0, pwm1 = 0, pwm2 = 0, pneu_flag = 0, light_flag = 0, light = 0;
+        private string Data;
+        private int temp_count = 0; // --> Getting avg temperatue
+        private double temp_avg = 0.0;
+        
         //Micro-ROV
-        int dir1_micro = 0, dir2_micro = 0, pwm1_micro = 0, pwm2_micro = 0;
+        private int dir1_micro = 0, dir2_micro = 0, pwm1_micro = 0, pwm2_micro = 0;
+
+        //Joystick & Communications
+        JoyStick joyStick;
+        Socket SCK;
+        EndPoint Local_ip, Remote_ip;
+
+
         private void btn2_CheckedChanged(object sender, EventArgs e)
         {
             micro++;
@@ -134,12 +146,9 @@ namespace JoyStickInterface
             }
         }
 
-
-        private void button12_Click(object sender, EventArgs e)
-        {
+        private void button12_Click(object sender, EventArgs e) =>
             this.refActualLength = Convert.ToDouble(textBox24.Text);
-        }
-
+      
         private void button11_Click(object sender, EventArgs e)
         {
 
@@ -157,12 +166,13 @@ namespace JoyStickInterface
             //Results (Experimental)
             this.expr_Volume = 0;
             this.expr_Force = 0;
-            this.expr_Weight = 0;
+            this.expr_mass = 0;
 
             //Results (Real)
             this.real_Volume = 0;
             this.real_Force = 0;
-            this.real_Weight = 0;
+            this.real_mass = 0;
+            this.difference = 0;
 
             //Labels
             label35.Text = "Select 2 Points!";
@@ -203,6 +213,12 @@ namespace JoyStickInterface
         private void button13_Click(object sender, EventArgs e) => //Click On S.G Button    
             specific_gravity = Convert.ToDouble(textBox25.Text);
 
+        private void button22_Click_1(object sender, EventArgs e)=> 
+            lift_capability = Convert.ToDouble(textBox41.Text);
+
+        private void button24_Click(object sender, EventArgs e)=>
+            Given_Force = Convert.ToDouble(textBox42.Text);
+
         private void button7_Click(object sender, EventArgs e) //Getting Expr_Volume
         {
             expr_Volume = (1.0 / 3.0) * Math.PI * Length * (Math.Pow((D3 / 2.0), 2) + (D3 / 2.0) * (D1 / 2) + Math.Pow((D1 / 2.0), 2)) - (Length * Math.PI * Math.Pow((D2 / 2.0), 2));
@@ -211,8 +227,8 @@ namespace JoyStickInterface
 
         private void button16_Click(object sender, EventArgs e) //Getting Expr_Weight
         {
-            expr_Weight = ((specific_gravity * water_denisty) - water_denisty) * expr_Volume * 1e-6;
-            label43.Text = expr_Weight.ToString(("0.#") + " N");
+            expr_mass = ((specific_gravity * water_denisty) - water_denisty) * expr_Volume * 1e-6;
+            label43.Text = expr_mass.ToString(("0.#") + "Kg");
         }
 
         private void button8_Click(object sender, EventArgs e) //Getting Expr_Force
@@ -225,23 +241,29 @@ namespace JoyStickInterface
         {
             /*  Getting Real Values */
             double D1, D2, D3, Length;
-            D1 = Convert.ToDouble(textBox26.Text);
-            D2 = Convert.ToDouble(textBox27.Text);
-            D3 = Convert.ToDouble(textBox28.Text);
+            D1 = Convert.ToDouble(textBox26.Text) * 2;
+            D2 = Convert.ToDouble(textBox27.Text) * 2;
+            D3 = Convert.ToDouble(textBox28.Text) * 2;
             Length = Convert.ToDouble(textBox29.Text);
             real_Volume = Math.Abs((1.0 / 3.0) * Math.PI * Length * (Math.Pow((D3 / 2.0), 2) + (D3 / 2.0) * (D1 / 2.0) + Math.Pow((D1 / 2.0), 2)) - (Length * Math.PI * Math.Pow((D2 / 2.0), 2)));
             label41.Text = "Real Volume: " + real_Volume.ToString(("0.#") + " cm^3");
-            real_Weight = ((specific_gravity * water_denisty) - water_denisty) * real_Volume * 1e-6;
-            label42.Text = "Real Weight: " + real_Weight.ToString(("0.#") + " N");
-            real_Force = (real_Weight * gravity);
+            real_mass = ((specific_gravity * water_denisty) - water_denisty) * real_Volume * 1e-6;
+            label42.Text = "Real mass: " + real_mass.ToString(("0.#") + " Kg");
+            label64.Text = "S.G " + specific_gravity.ToString(("0.#"));
+
+            real_Force = (real_mass * gravity);
             label44.Text = "Real Force: " + real_Force.ToString(("0.#") + " N");
         }
 
-        int z;
+        private void button23_Click(object sender, EventArgs e)
+        {
+            difference = Given_Force - lift_capability;
+            label62.Text = difference.ToString(("0.#") + " N");
+        }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            textBox32.Text = "http://192.168.0.200";
+            textBox32.Text = "http://192.168.0.88";
             button15.Enabled = false;
         }
 
@@ -250,67 +272,101 @@ namespace JoyStickInterface
             webBrowser1.Url = new Uri(textBox32.Text);
         }
 
-        private void button18_Click(object sender, EventArgs e)
-        {
+        private void button18_Click(object sender, EventArgs e) =>
             PythonController.controlShapes();
-        }
 
-        private void button19_Click(object sender, EventArgs e)
-        {
+        private void button19_Click(object sender, EventArgs e) =>
             PythonController.control();
-        }
 
         private void toggle(object sender, EventArgs e)
         {
             if (radioButton13.Checked == true)
             {
                 radioButton13.Checked = false;
+                radioButton13.Text = "";
                 this.UD_MAX_POINT = Convert.ToInt32(textBox39.Text);
                 this.UD_MIN_POINT = Convert.ToInt32(textBox40.Text);
                 this.MAX_POINT = Convert.ToInt32(textBox35.Text);
                 this.MIN_POINT = Convert.ToInt32(textBox36.Text);
                 radioButton14.Checked = true;
+                radioButton14.Text = "High";
             }
             else
             {
                 radioButton14.Checked = false;
+                radioButton14.Text = "";
                 this.UD_MAX_POINT = Convert.ToInt32(textBox37.Text);
                 this.UD_MIN_POINT = Convert.ToInt32(textBox38.Text);
                 this.MAX_POINT = Convert.ToInt32(textBox34.Text);
                 this.MIN_POINT = Convert.ToInt32(textBox33.Text);
                 radioButton13.Checked = true;
+                radioButton13.Text = "Low";
             }
-        }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
-            /*  L   O   W       M   O   D   E   */
-            (textBox39.Text) = "1500"; //Up Down MAX_POINT
-            (textBox40.Text) = "1500"; //Up Down MIN_Point
-            (textBox35.Text) = "1500"; //Horizontal MAX_Point
-            (textBox36.Text) = "1500"; //Horizontal MIN_Point
+
+            /*  H   I   G   H       M   O   D   E   */
+            (textBox39.Text) = "1800"; //Up Down MAX_POINT
+            (textBox40.Text) = "1250"; //Up Down MIN_Point
+            (textBox35.Text) = "1750"; //Horizontal MAX_Point
+            (textBox36.Text) = "1250"; //Horizontal MIN_Point
 
             /*  -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -*/
 
 
-            /*  H   I   G   H       M   O   D   E   */
-            (textBox37.Text) = "1500"; //Up Down MAX_POINT
-            (textBox38.Text) = "1500"; //Up Down MIN_Point
-            (textBox34.Text) = "1500"; //Horizontal MAX_Point
-            (textBox33.Text) = "1500"; //Horizontal MIN_Point
+            /*  L   O   W       M   O   D   E   */
+            (textBox37.Text) = "1650"; //Up Down MAX_POINT
+            (textBox38.Text) = "1350"; //Up Down MIN_Point
+            (textBox34.Text) = "1600"; //Horizontal MAX_Point
+            (textBox33.Text) = "1400"; //Horizontal MIN_Point
         }
 
+        private void tabControl1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(' '))
+                toggle(null, null);
+            else if (e.KeyChar.Equals(Keys.RControlKey))
+            {
+                if (label65.Text == "Connected") {
+                    label65.Text = "Not Connected";
+                    SCK.Shutdown(new SocketShutdown());
+                }
+                else
+                {
+                    label65.Text = "Connected";
+                    button2_Click(null, null);
+                }
+            }
+        }
 
-        int flag = 0; //Prevent pilot making error before starting communication....
+        private void button28_Click(object sender, EventArgs e)
+        {
+            specific_gravity = 7.87;
+            label64.Text = "S.G " + specific_gravity.ToString(("0.#"));
+        }
 
-        JoyStick joyStick;
-        Socket SCK;
-        EndPoint Local_ip, Remote_ip;
+        private void button25_Click(object sender, EventArgs e)
+        {
+            specific_gravity = 7.87;
+            label64.Text = "S.G " + specific_gravity.ToString(("0.#"));
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            specific_gravity = 8.03;
+            label64.Text = "S.G " + specific_gravity.ToString(("0.#"));
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            specific_gravity = 7.87;
+            label64.Text = "S.G " + specific_gravity.ToString(("0.#"));
+        }
+
+         int flag = 0; //Prevent pilot making error before starting communication....
+
         #endregion
 
         #region Form
@@ -343,12 +399,10 @@ namespace JoyStickInterface
             }
 
 
-            if (e.buttons[4])
+            if (e.buttons[9])
                 toggle(null, null);
             // if(e.buttons[0])
 
-            Console.WriteLine(z.ToString());
-            z++;
             axisAtxt.Text = Convert.ToString(e.axisA);
             axisCtxt.Text = Convert.ToString(e.axisC);
             axisDtxt.Text = Convert.ToString(e.axisD);
@@ -389,8 +443,9 @@ namespace JoyStickInterface
             {
                 if (micro % 2 == 1)
                 {
-                    pwm1_micro = pwm2_micro = map(e.axisD, START_UP_ZONE, END_UP_ZONE, 0, 255);
-                    dir1_micro = dir2_micro = 0;
+                    pwm1_micro = map(e.axisD, START_UP_ZONE, END_UP_ZONE, 0, 255);
+                    pwm1_micro = pwm1_micro <= 20 ? 0 : pwm1_micro;
+                    dir1_micro = 1;
                     esMotor[0] = esMotor[1] = esMotor[2] = esMotor[3] = esMotor[4] = esMotor[5] = 1500;
                 }
                 else
@@ -406,9 +461,9 @@ namespace JoyStickInterface
             {
                 if (micro % 2 == 1)
                 {
-                    pwm1_micro = pwm2_micro = map(e.axisD, START_DOWN_ZONE, END_DOWN_ZONE, 0, 255);
-                    dir1_micro = 1;
-                    dir2_micro = 1;
+                    pwm1_micro = map(e.axisD, START_DOWN_ZONE, END_DOWN_ZONE, 0, 255);
+                    pwm1_micro = pwm1_micro <= 20 ? 0 : pwm1_micro;
+                    dir1_micro = 0;
                     esMotor[0] = esMotor[1] = esMotor[2] = esMotor[3] = esMotor[4] = esMotor[5] = 1500;
                 }
                 else
@@ -422,20 +477,40 @@ namespace JoyStickInterface
             //Left Direction
             else if (e.axisC < START_UP_ZONE && e.axisC < e.axisD && e.axisC < END_DOWN_ZONE - e.axisD)
             {
-
-                esMotor[0] = esMotor[2] =
-                map(e.axisC, START_UP_ZONE, END_UP_ZONE, MID_POINT, MAX_POINT);
-                esMotor[1] = esMotor[3] =
-                    map(e.axisC, START_UP_ZONE, END_UP_ZONE, MID_POINT, MIN_POINT);
+                if (micro % 2 == 1)
+                {
+                    pwm2_micro = map(e.axisC, START_UP_ZONE, END_UP_ZONE, 0, 255);
+                    pwm2_micro = pwm2_micro <= 20 ? 0 : pwm2_micro;
+                    dir2_micro = 0;
+                    esMotor[0] = esMotor[1] = esMotor[2] = esMotor[3] = esMotor[4] = esMotor[5] = 1500;
+                }
+                else
+                {
+                    pwm1_micro = pwm2_micro = dir1_micro = dir2_micro = 0;
+                    esMotor[0] = esMotor[2] =
+                    map(e.axisC, START_UP_ZONE, END_UP_ZONE, MID_POINT + 30, MAX_POINT - 30);
+                    esMotor[1] = esMotor[3] =
+                        map(e.axisC, START_UP_ZONE, END_UP_ZONE, MID_POINT + 30, MIN_POINT - 30);
+                }
             }
 
             //Right Direction
             else if (e.axisC > START_DOWN_ZONE && e.axisC > e.axisD && e.axisC > END_DOWN_ZONE - e.axisD)
             {
-                esMotor[0] = esMotor[2] =
-                map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MIN_POINT);
-                esMotor[1] = esMotor[3] =
-                    map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MAX_POINT);
+                if (micro % 2 == 1)
+                {
+                    pwm2_micro = map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, 0, 255);
+                    pwm2_micro = pwm2_micro <= 20 ? 0 : pwm2_micro;
+                    dir2_micro = 1;
+                    esMotor[0] = esMotor[1] = esMotor[2] = esMotor[3] = esMotor[4] = esMotor[5] = 1500;
+                }
+                else
+                {
+                    esMotor[0] = esMotor[2] =
+                    map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT + 30, MIN_POINT - 30);
+                    esMotor[1] = esMotor[3] =
+                        map(e.axisC, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT + 30, MAX_POINT - 30);
+                }
             }
 
             //Up Direction
@@ -456,34 +531,34 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
             //Rotate Left
             if (e.axisA < START_UP_ZONE)
             {
-                esMotor[1] = esMotor[2] =
+                esMotor[3] = esMotor[2] =
                 map(e.axisA, START_UP_ZONE, END_UP_ZONE, MID_POINT, MAX_POINT);
-                esMotor[0] = esMotor[3] =
+                esMotor[0] = esMotor[1] =
                     map(e.axisA, START_UP_ZONE, END_UP_ZONE, MID_POINT, MIN_POINT);
             }
 
             //Rotate Right
             else if (e.axisA > START_DOWN_ZONE)
             {
-                esMotor[1] = esMotor[2] =
+                esMotor[3] = esMotor[2] =
                 map(e.axisA, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MIN_POINT);
-                esMotor[0] = esMotor[3] =
+                esMotor[0] = esMotor[1] =
                     map(e.axisA, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, MAX_POINT);
             }
 
-            //Pneu Arm          
+            //Pneu Arm    
+            //solenStatus = Convert.ToInt16(e.buttons[0]);
+
             if (e.buttons[2] && pneu_flag == 0 || e.buttons[0])
             {
                 pneu_flag = 1;
                 solenStatus = (solenStatus == 0) ? 1 : 0;
 
-                if (e.buttons[0])
-                    solenStatus = 1;
             }
 
-            else if(!e.buttons[2])
+            else if (!e.buttons[2])
                 pneu_flag = 0;
-
+            
             //Pneu Arm rotating
             if (e.pov[0] == 9000)
             {
@@ -541,11 +616,7 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
             {
                 light_flag = 0;
             }
-
-
-
-
-
+            
             #endregion
 
             #region concatenation 
@@ -566,6 +637,7 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
                 + "O" + Convert.ToString(dir2_micro)
                 + "P" + Convert.ToString(pwm1_micro)
                 + "Q" + Convert.ToString(pwm2_micro)
+                + "R" + label65.Text == "Connected" ? "1" : "0"
                 + "Z";
             #endregion
 
@@ -620,8 +692,6 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
             try
             {
                 button1.Enabled = false;
-                button2.Enabled = false;
-                button2.Text = "Connected";
 
                 Local_ip = new IPEndPoint(IPAddress.Parse(textBox1.Text), Convert.ToInt32(textBox3.Text));//son (IPEndpoint)...take ip and port && IPAddress.parse convert any input to ip address of laptop
                 SCK.Bind(Local_ip);// make lap to take ip address and port ...
@@ -632,7 +702,8 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
                 byte[] buffer = new byte[15000];//store the sending or receiving data...
                 AsyncCallback processing = new AsyncCallback(process);//processing is a delegate...process is a function
                 SCK.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref Remote_ip, processing, buffer);//BeginReceive is the fn will be called in library
-
+                
+                
             }
             catch (Exception ex)
             {
@@ -651,7 +722,6 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
         }
         #endregion
 
-
         #region Receiving
         void process(IAsyncResult state)
         {
@@ -669,6 +739,7 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
 
                     if (size > 0) // if c# received data ....
                     {
+                        temp_count++;
                         //Place of receiving.
                         byte[] ReceivedData = (byte[])state.AsyncState;
                         //Convert byte to string 
@@ -683,8 +754,14 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
                         int findTemp = final_data.IndexOf('B');
                         int findPressure = final_data.IndexOf('C');
                         textBox7.Text = final_data.Substring(findPressure + 1, ((final_data.Length - 1) - findPressure)); //Pressure
-                        textBox8.Text = final_data.Substring(findTemp + 1, (findPressure - findTemp)); //Temperature
+                        if (temp_count == 5)
+                        {
+                            temp_count = 0;
+                            textBox8.Text = Convert.ToString(temp_avg); //Temperature
+                            temp_avg = 0.0;
+                        }
                         textBox30.Text = final_data.Substring(findpH + 1, (findTemp - findpH)); //pH
+                        temp_avg += Convert.ToDouble(final_data.Substring(findTemp + 1, (findPressure - findTemp)));
                     }
                 }
 
