@@ -76,6 +76,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label65 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.button21 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
@@ -215,7 +216,6 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label65 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -721,6 +721,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Co-pilot";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.ForeColor = System.Drawing.Color.Red;
+            this.label65.Location = new System.Drawing.Point(407, 127);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(63, 13);
+            this.label65.TabIndex = 25;
+            this.label65.Text = "Status: N/A";
             // 
             // groupBox15
             // 
@@ -1703,7 +1713,6 @@
             this.label64.Size = new System.Drawing.Size(34, 13);
             this.label64.TabIndex = 33;
             this.label64.Text = "-N/D-";
-            this.label64.Click += new System.EventHandler(this.label64_Click);
             // 
             // button24
             // 
@@ -2083,16 +2092,6 @@
             this.button18.Text = "Shapes";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.ForeColor = System.Drawing.Color.Red;
-            this.label65.Location = new System.Drawing.Point(407, 127);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(59, 13);
-            this.label65.TabIndex = 25;
-            this.label65.Text = "Connected";
             // 
             // Form1
             // 

@@ -307,3 +307,31 @@ X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86
 X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.CoreCompileInputs.cache
 X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
 X:\Robotech Official_V1\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe.config
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.exe
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\JoyStickInterface.pdb
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.dll
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Modules.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.SQLite.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\IronPython.Wpf.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.DirectX.DirectInput.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Dynamic.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csprojResolveAssemblyReference.cache
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Form1.resources
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.Properties.Resources.resources
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.GenerateResource.Cache
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.csproj.CoreCompileInputs.cache
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.exe
+X:\Robo-Tech\Robo-tech\Robotech Official_V1\JoyStickInterface\obj\x86\Debug\JoyStickInterface.pdb

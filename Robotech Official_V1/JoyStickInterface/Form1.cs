@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Drawing;
 
 namespace JoyStickInterface
-{   //A + Motor1
+{
     public partial class Form1 : Form
     {
         #region Variables & Objects
@@ -30,6 +30,7 @@ namespace JoyStickInterface
         private Point p1;
         private Point p2;
         private int stateCounter = 0; // 0 --> Get P1, 1 --> Get P2, 2 Get Answer
+
 
         //Reference Length
         private double refVirtualLength = 1.0;
@@ -60,18 +61,17 @@ namespace JoyStickInterface
         // Status
         private int micro = 0;
         private int solenStatus = 0, dir1 = 0, dir2 = 0, pwm1 = 0, pwm2 = 0, pneu_flag = 0, light_flag = 0, light = 0;
-        private string Data;
-        private int temp_count = 0; // --> Getting avg temperatue
-        private double temp_avg = 0.0;
-        
+        public string Data = "";
+        public int temp_count = 0; // --> Getting avg temperatue
+        public double temp_avg = 0.0;
+
         //Micro-ROV
         private int dir1_micro = 0, dir2_micro = 0, pwm1_micro = 0, pwm2_micro = 0;
 
         //Joystick & Communications
         JoyStick joyStick;
-        Socket SCK;
+        Socket SCK = new Socket(AddressFamily.InterNetwork, SocketType.Dgram,ProtocolType.Udp);
         EndPoint Local_ip, Remote_ip;
-
 
         private void btn2_CheckedChanged(object sender, EventArgs e)
         {
@@ -148,7 +148,7 @@ namespace JoyStickInterface
 
         private void button12_Click(object sender, EventArgs e) =>
             this.refActualLength = Convert.ToDouble(textBox24.Text);
-      
+
         private void button11_Click(object sender, EventArgs e)
         {
 
@@ -213,10 +213,10 @@ namespace JoyStickInterface
         private void button13_Click(object sender, EventArgs e) => //Click On S.G Button    
             specific_gravity = Convert.ToDouble(textBox25.Text);
 
-        private void button22_Click_1(object sender, EventArgs e)=> 
+        private void button22_Click_1(object sender, EventArgs e) =>
             lift_capability = Convert.ToDouble(textBox41.Text);
 
-        private void button24_Click(object sender, EventArgs e)=>
+        private void button24_Click(object sender, EventArgs e) =>
             Given_Force = Convert.ToDouble(textBox42.Text);
 
         private void button7_Click(object sender, EventArgs e) //Getting Expr_Volume
@@ -327,16 +327,18 @@ namespace JoyStickInterface
         {
             if (e.KeyChar.Equals(' '))
                 toggle(null, null);
-            else if (e.KeyChar.Equals(Keys.RControlKey))
+            else if (e.KeyChar.Equals('-'))
             {
-                if (label65.Text == "Connected") {
+                if (label65.Text == "Connected")
+                {
                     label65.Text = "Not Connected";
-                    SCK.Shutdown(new SocketShutdown());
+                    SCK.Shutdown(SocketShutdown.Both);
+                    SCK.Close();
                 }
                 else
                 {
-                    label65.Text = "Connected";
                     button2_Click(null, null);
+                    label65.Text = "Connected";         
                 }
             }
         }
@@ -365,8 +367,6 @@ namespace JoyStickInterface
             label64.Text = "S.G " + specific_gravity.ToString(("0.#"));
         }
 
-         int flag = 0; //Prevent pilot making error before starting communication....
-
         #endregion
 
         #region Form
@@ -377,7 +377,6 @@ namespace JoyStickInterface
             joyStick.fireEvent += new JoyStick.StateEventHandler(JoyStickStateChangedHandler);
             SCK = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             SCK.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-
         }
         #endregion
 
@@ -547,7 +546,6 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
             }
 
             //Pneu Arm    
-            //solenStatus = Convert.ToInt16(e.buttons[0]);
 
             if (e.buttons[2] && pneu_flag == 0 || e.buttons[0])
             {
@@ -558,7 +556,7 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
 
             else if (!e.buttons[2])
                 pneu_flag = 0;
-            
+
             //Pneu Arm rotating
             if (e.pov[0] == 9000)
             {
@@ -616,7 +614,7 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
             {
                 light_flag = 0;
             }
-            
+
             #endregion
 
             #region concatenation 
@@ -637,12 +635,11 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
                 + "O" + Convert.ToString(dir2_micro)
                 + "P" + Convert.ToString(pwm1_micro)
                 + "Q" + Convert.ToString(pwm2_micro)
-                + "R" + label65.Text == "Connected" ? "1" : "0"
                 + "Z";
             #endregion
 
             #region Sending 
-            if (flag == 1)
+            if (label65.Text == "Connected")
             {
                 try
                 {
@@ -688,22 +685,20 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
         #region Start Comm 
         private void button2_Click(object sender, EventArgs e)
         {
-            flag = 1; // Pilot can use joystick without any error ...
             try
             {
-                button1.Enabled = false;
+ 
+                    button1.Enabled = false;
+                  //  button2.Enabled = false;
+                    Local_ip = new IPEndPoint(IPAddress.Parse(textBox1.Text), Convert.ToInt32(textBox3.Text));//son (IPEndpoint)...take ip and port && IPAddress.parse convert any input to ip address of laptop
+                    SCK.Bind(Local_ip);// make lap to take ip address and port ...
 
-                Local_ip = new IPEndPoint(IPAddress.Parse(textBox1.Text), Convert.ToInt32(textBox3.Text));//son (IPEndpoint)...take ip and port && IPAddress.parse convert any input to ip address of laptop
-                SCK.Bind(Local_ip);// make lap to take ip address and port ...
-
-                Remote_ip = new IPEndPoint(IPAddress.Parse(textBox2.Text), Convert.ToInt32(textBox4.Text));//son inherit form Endpoint ...
-                SCK.Connect(Remote_ip);
-                //start communication after setup 
-                byte[] buffer = new byte[15000];//store the sending or receiving data...
-                AsyncCallback processing = new AsyncCallback(process);//processing is a delegate...process is a function
-                SCK.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref Remote_ip, processing, buffer);//BeginReceive is the fn will be called in library
-                
-                
+                    Remote_ip = new IPEndPoint(IPAddress.Parse(textBox2.Text), Convert.ToInt32(textBox4.Text));//son inherit form Endpoint ...
+                    SCK.Connect(Remote_ip);
+                    //start communication after setup 
+                    byte[] buffer = new byte[20000];//store the sending or receiving data...
+                    AsyncCallback processing = new AsyncCallback(process);//processing is a delegate...process is a function
+                    SCK.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref Remote_ip, processing, buffer);//BeginReceive is the fn will be called in library
             }
             catch (Exception ex)
             {
@@ -771,7 +766,7 @@ map(e.axisF, START_DOWN_ZONE, END_DOWN_ZONE, MID_POINT, UD_MIN_POINT);
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.ToString());
+               MessageBox.Show(exp.ToString());
 
             }
         }
